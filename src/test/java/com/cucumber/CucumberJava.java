@@ -1,20 +1,23 @@
-package CucumberJava;
+package com.cucumber;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
-import cucumber.annotation.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
-public class cucumberJava {
+public class CucumberJava {
     WebDriver driver = null;
 
     @Given("^I have open the browser$")
     public void openBrowser() {
         driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDrivers\\chromedriver_win32\\chromedriver.exe");
     }
 
     @When("^I open Facebook website$")
